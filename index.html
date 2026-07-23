@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tim's Developer Portfolio | Front-End Web Developer</title>
+    <meta name="description" content="Portfolio of a passionate Front-End Web Developer specializing in HTML, CSS, and JavaScript. Explore my projects, skills, and get in touch.">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1 id="header">Welcome to Tim's Portfolio</h1>
+    <button id="hamburger-icon" aria-label="Toggle Menu" style="display: none;">☰</button>
+    <nav role="navigation" aria-label="Main Navigation">
+        <ul>
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="about-me">
+        <h2>About Me</h2>
+        <p>Hello! I am an aspiring front-end web developer currently mastering HTML, CSS, and JavaScript. I am passionate about building accessible, responsive, and highly interactive web experiences using modern design patterns.</p>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+
+        <!-- Updated Filter Buttons -->
+        <div id="filter-buttons" style="text-align: center; margin-bottom: 20px;">
+            <button onclick="filterProjects('all')">All</button>
+            <button onclick="filterProjects('javascript')">JavaScript</button>
+            <button onclick="filterProjects('css')">CSS Layouts</button>
+        </div>
+
+        <article data-category="javascript">
+            <h3>JavaScript Budgeting App</h3>
+            <figure>
+                <img src="budget-app-screenshot.jpg" alt="Dashboard interface of a budgeting application showing total expenses and a list of items">
+                <figcaption>A modular application tracking daily expenses.</figcaption>
+            </figure>
+            <p>This project utilises the Observer design pattern and strictly scoped variables to manage state and automatically calculate totals whenever a new expense is added.</p>
+        </article>
+
+        <!-- Updated Category to "css" -->
+        <article data-category="css">
+            <h3>Quote of the Day Generator</h3>
+            <figure>
+                <img src="quote-app-screenshot.jpg" alt="A clean web page displaying a large inspirational quote and a button to generate a new one">
+                <figcaption>An interactive DOM manipulation project.</figcaption>
+            </figure>
+            <p>A dynamic web application that cycles through an array of quotes using JavaScript event listeners and state tracking.</p>
+        </article>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <ul>
+            <li>HTML5 & Semantic Markup</li>
+            <li>CSS3 & Responsive Design</li>
+            <li>JavaScript (ES6+)</li>
+            <li>Asynchronous Programming (Promises, Async/Await)</li>
+            <li>Software Design Patterns (Module, Singleton, Observer)</li>
+            <li>Web Accessibility (WCAG & ARIA)</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <form action="#" method="POST">
+            <div>
+                <label for="user-name">Name:</label>
+                <input type="text" id="user-name" name="user-name" required>
+            </div>
+
+            <div>
+                <label for="user-email">Email Address:</label>
+                <input type="email" id="user-email" name="user-email" required>
+            </div>
+
+            <div>
+                <label for="user-message">Message:</label>
+                <textarea id="user-message" name="user-message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Front-End Developer. Built with semantic HTML and accessibility in mind.</p>
+</footer>
+
+<script src="index.js"></script>
+</body>
+</html>
